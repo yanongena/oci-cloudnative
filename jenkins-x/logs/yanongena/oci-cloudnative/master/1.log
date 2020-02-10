@@ -1,0 +1,52 @@
+
+Showing logs for build [32myanongena-oci-cloudnative-maste-dlsff-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mpq25[0m
+{"level":"warn","ts":1581320697.3535771,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581320697.3560815,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32myanongena-oci-cloudnative-maste-dlsff-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-2plb8[0m
+{"level":"warn","ts":1581320698.2980437,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1581320698.3037508,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32myanongena-oci-cloudnative-maste-dlsff-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32myanongena-oci-cloudnative-maste-dlsff-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-yanongena-oci-cloudnative-maste-dlsff-zslmq[0m
+{"level":"warn","ts":1581320761.4321337,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581320763.7961497,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/oci-cloudnative.git @ v1.0.4 in path /workspace/source"}
+
+Showing logs for build [32myanongena-oci-cloudnative-maste-dlsff-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b8bf0f0227028ce50d83480d5a3af2e20db6177b
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32myanongena-oci-cloudnative-maste-dlsff-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32myanongena-oci-cloudnative-maste-dlsff-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32myanongena-oci-cloudnative-maste-dlsff-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN saveError ENOENT: no such file or directory, open '/workspace/source/package.json'
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open '/workspace/source/package.json'
+npm WARN source No description
+npm WARN source No repository field.
+npm WARN source No README data
+npm WARN source No license field.
+
+up to date in 0.439s
+found 0 vulnerabilities
+
+
+Showing logs for build [32myanongena-oci-cloudnative-maste-dlsff-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+npm ERR! path /workspace/source/package.json
+npm ERR! code ENOENT
+npm ERR! errno -2
+npm ERR! syscall open
+npm ERR! enoent ENOENT: no such file or directory, open '/workspace/source/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /builder/home/.npm/_logs/2020-02-10T07_46_09_039Z-debug.log
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-npm-test'. The execution of the pipeline has stopped.[0m
