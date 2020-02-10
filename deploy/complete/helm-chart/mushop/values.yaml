@@ -1,6 +1,6 @@
 global:
   mock:
-    service: "false"
+    service: "all"
   osb:
     instanceName: mushop
   ociAuthSecret:
